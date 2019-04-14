@@ -3,5 +3,6 @@ class Dog
   attr_reader :id
   
   def initialize(attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
   end
 end
